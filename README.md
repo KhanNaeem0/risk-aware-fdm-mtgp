@@ -82,7 +82,7 @@ If you use this code, please cite the paper and the archived release:
 }
 ```
 
-Archived snapshot (Zenodo): https://doi.org/10.5281/zenodo.XXXXXXX  *(added on release)*
+Archived snapshot (Zenodo): (https://doi.org/10.5281/zenodo.20520421) *(added on release)*
 
 ---
 
