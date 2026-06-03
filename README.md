@@ -51,7 +51,7 @@ strain-energy density.
 git clone https://github.com/<your-username>/risk-aware-fdm-mtgp.git
 cd risk-aware-fdm-mtgp
 pip install -r requirements.txt
-jupyter notebook naeem_LOCKED_real.ipynb
+jupyter notebook main.ipynb
 ```
 
 Then **Run All**. The pipeline is deterministic (primary seed `42`; the five-seed
