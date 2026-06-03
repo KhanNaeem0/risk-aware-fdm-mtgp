@@ -5,8 +5,7 @@
 
 Reference implementation for the paper:
 
-> **Risk-Aware Multi-Objective Optimisation of Fused Deposition Modelling via
-> Multi-Task Gaussian Process Regression and Asymmetric Bayesian Loss Functions**
+> **Risk aware multi-objective optimisation of fused deposition modelling via multi-task Gaussian processes and asymmetric Bayesian loss for safety critical and throughput driven deployment **
 > Khan Naeem and Jianjun Wang.
 > *Journal of Intelligent Manufacturing* (under review), 2026.
 
