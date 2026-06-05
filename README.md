@@ -1,11 +1,11 @@
-# Risk aware multi-objective optimisation of fused deposition modelling via multi-task Gaussian processes and asymmetric Bayesian loss for safety critical and throughput driven deployment 
+# Risk-Aware Process Selection for Fused Deposition Modeling via Multi-Task Gaussian Processes and Asymmetric Bayesian Loss
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 
 Reference implementation for the paper:
 
-> **Risk aware multi-objective optimisation of fused deposition modelling via multi-task Gaussian processes and asymmetric Bayesian loss for safety critical and throughput driven deployment **
+> **Risk-Aware Process Selection for Fused Deposition Modeling via Multi-Task Gaussian Processes and Asymmetric Bayesian Loss**
 > Khan Naeem and Jianjun Wang.
 > *Journal of Intelligent Manufacturing* (under review), 2026.
 
