@@ -1,32 +1,40 @@
-# Risk-Aware Process Selection for Fused Deposition Modeling via Multi-Task Gaussian Processes and Asymmetric Bayesian Loss
+# A covariance-aware asymmetric Bayes-risk method for safe process selection in additive manufacturing
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 
 Reference implementation for the paper:
 
-> **Risk-Aware Process Selection for Fused Deposition Modeling via Multi-Task Gaussian Processes and Asymmetric Bayesian Loss**
+> **A covariance-aware asymmetric Bayes-risk method for safe process selection in additive manufacturing**
 > Khan Naeem and Jianjun Wang.
-> *Journal of Intelligent Manufacturing* (under review), 2026.
+> *Reliability Engineering & System Safety* (under review), 2026.
 
 ---
 
 ## Overview
 
-This repository implements a **risk-aware multi-objective process-optimisation
-framework** for fused deposition modelling (FDM). A **multi-task Gaussian process
-with intrinsic coregionalisation (MTGP-ICM)** couples the four correlated
-mechanical responses and shares statistical strength under limited data. Three
-**closed-form asymmetric Bayes-risk estimators** (LINEX, precautionary, and
-entropy losses) quantify the directional risk of unsafe over-prediction, and are
-combined with an **EHVI–NSGA-II** Pareto search and a **four-method MCDM
-consensus** to expose two deployment-context optima. Prediction intervals are
-calibrated with a **split-conformal** layer and a **deployment knock-down factor
-(KDF)**.
+This repository implements a **reliability-based process-selection framework**
+for fused deposition modelling (FDM) of load-bearing polymer parts. A
+**multi-task Gaussian process with intrinsic coregionalisation (MTGP-ICM)**
+models three correlated mechanical responses — elastic modulus, compressive
+strength, and strain-energy density — jointly, sharing statistical strength
+under a limited experimental budget (*N* = 38). A **closed-form asymmetric
+Bayes-risk action** (LINEX loss) on a scalar capacity margin propagates the
+learned cross-response covariance into the safety decision itself, yielding a
+conservative operating point deployed under **split-conformal prediction
+intervals** and a **deployment knock-down factor (KDF)**.
 
-**Responses:** production time, elastic modulus, compressive strength,
-strain-energy density.
+**Responses (mechanical):** elastic modulus (*y*₁), compressive strength
+(*y*₂), strain-energy density (*y*₃).  
 **Inputs:** layer thickness, nozzle temperature, infill density, print speed.
+
+Key reliability quantities:
+- **Capacity margin:** *M* = **c**ᵀ**y**ₘₑcₕ with conservative LINEX-optimal
+  action *δ*⋆_M = **c**ᵀ**μ** − (*a*_M/2) **c**ᵀ**Σc**
+- **Reliability index:** *β* ≈ 1.64 at nominal 95% coverage (full covariance)
+  vs. *β* ≈ 1.09 under independent-output approximation
+- **Cross-response correlation:** empirical *r* ∈ [0.93, 0.97]; learned latent
+  *ρ* ∈ [0.79, 0.97]
 
 ---
 
@@ -34,13 +42,13 @@ strain-energy density.
 
 | File | Description |
 |------|-------------|
-| `naeem_LOCKED_real.ipynb` | Complete, self-contained pipeline (data, MTGP-ICM fit, LOO-CV, EHVI–NSGA-II Pareto search, closed-form Bayesian risk, MCDM consensus, confirmation, conformal + KDF calibration, simulation safety demonstration, and all publication figures). The 38-specimen dataset is embedded in the notebook. |
+| `main.ipynb` | Complete, self-contained pipeline: 38-specimen dataset, MTGP-ICM fit, leave-one-out cross-validation, closed-form Bayesian risk on coregionalised margin, direct conservative-margin operating-point selection, split-conformal calibration, knock-down factor estimation, controlled simulation, analytical cantilever-beam benchmark, and all publication figures. |
 | `README.md` | This file |
 | `requirements.txt` | Python dependencies |
 | `LICENSE` | MIT License |
 
 > The notebook is the single source of truth for every value reported in the
-> manuscript. It runs end-to-end with a fixed random seed.
+> manuscript. It runs end-to-end with a fixed random seed (primary: 42).
 
 ---
 
@@ -51,34 +59,6 @@ git clone https://github.com/<your-username>/risk-aware-fdm-mtgp.git
 cd risk-aware-fdm-mtgp
 pip install -r requirements.txt
 jupyter notebook main.ipynb
-```
-
-Then **Run All**. The pipeline is deterministic (primary seed `42`; the five-seed
-set `{42, 123, 456, 789, 2024}` is used for hypervolume-stability estimates).
-The final cell prints all manuscript numbers — leave-one-out R², the learned ICM
-coregionalisation matrix, ARD importances, Pareto size and hypervolume, entropy
-weights, the dual-pathway optima, confirmation metrics, and the knock-down
-factor — and exports them to JSON.
-
-**Built with:** NumPy, SciPy, scikit-learn, pandas, Matplotlib, PyTorch,
-GPyTorch, and pymoo.
-
----
-
-## Citation
-
-If you use this code, please cite the paper and the archived release:
-
-```bibtex
-@article{NaeemWang2026FDM,
-  title   = {Risk-Aware Multi-Objective Optimisation of Fused Deposition Modelling
-             via Multi-Task Gaussian Process Regression and Asymmetric Bayesian
-             Loss Functions},
-  author  = {Naeem, Khan and Wang, Jianjun},
-  journal = {Journal of Intelligent Manufacturing},
-  year    = {2026},
-  note    = {Under review}
-}
 ```
 
 Archived snapshot (Zenodo): (https://doi.org/10.5281/zenodo.20520421) *(added on release)*
