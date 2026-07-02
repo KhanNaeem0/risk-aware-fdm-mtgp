@@ -1,11 +1,11 @@
-# A covariance-aware asymmetric Bayes-risk method for safe process selection in additive manufacturing
+# A covariance-aware asymmetric Bayes-risk method for safety-critical process selection in additive manufacturing
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 
 Reference implementation for the paper:
 
-> **A covariance-aware asymmetric Bayes-risk method for safe process selection in additive manufacturing**
+> **A covariance-aware asymmetric Bayes-risk method for safety-critical process selection in additive manufacturing**
 > Khan Naeem and Jianjun Wang.
 > *Reliability Engineering & System Safety* (under review), 2026.
 
