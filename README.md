@@ -1,8 +1,8 @@
 # Covariance-aware asymmetric Bayes risk for reliability-based process selection: an additive manufacturing study
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20520421.svg)](https://doi.org/10.5281/zenodo.20520421)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20520420.svg)](https://doi.org/10.5281/zenodo.20520420)
 
 Reference implementation for the paper:
 
@@ -55,8 +55,8 @@ Key quantities:
 
 | File | Description |
 |------|-------------|
-| `main.ipynb` | Complete pipeline: 38-specimen dataset, MTGP-ICM fit, leave-one-out cross-validation, variance inflation, closed-form asymmetric Bayes action on the coregionalized margin, operating-point selection, conformal calibration, knock-down factor, controlled simulation, cantilever-beam benchmark, sensitivity and negative-transfer studies, and the publication figures. |
-| `results_locked.xlsx` | Locked workbook of the numerical results produced by the notebook. |
+| `MABR_GP.ipynb` | Complete pipeline: 38-specimen dataset, MTGP-ICM fit, leave-one-out cross-validation, variance inflation, closed-form asymmetric Bayes action on the coregionalized margin, operating-point selection, conformal calibration, knock-down factor, controlled simulation, cantilever-beam benchmark, sensitivity and negative-transfer studies, and the publication figures. |
+| `MABR_GP_results_locked.xlsx` | Locked workbook of the numerical results produced by the notebook. |
 | `dataset_S1.csv` | The complete N = 38 process–response dataset (Supplementary Table S1). |
 | `README.md` | This file. |
 | `requirements.txt` | Python dependencies. |
@@ -69,13 +69,13 @@ The notebook runs end-to-end with a fixed random seed (primary: 42).
 ## Reproducing the results
 
 ```bash
-git clone https://github.com/<your-username>/risk-aware-fdm-mtgp.git
+git clone https://github.com/KhanNaeem0/risk-aware-fdm-mtgp.git
 cd risk-aware-fdm-mtgp
 pip install -r requirements.txt
-jupyter notebook main.ipynb
+jupyter notebook MABR_GP.ipynb
 ```
 
-Archived snapshot (Zenodo): https://doi.org/10.5281/zenodo.20520421
+Archived snapshot (Zenodo): https://doi.org/10.5281/zenodo.20520420
 
 ---
 
