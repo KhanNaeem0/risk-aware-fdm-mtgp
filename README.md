@@ -98,7 +98,7 @@ If you use this code or data, please cite:
 
 ## Authors
 
-- **Khan Naeem**, School of Economics and Management, Department of Management
+- **Naeem Khan**, School of Economics and Management, Department of Management
   Science and Engineering, Nanjing University of Science and Technology, and
   Jiangsu Province Engineering Research Center of Quality Improvement for
   High-end Equipment, Nanjing, China.
