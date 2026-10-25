@@ -85,7 +85,7 @@ If you use this code or data, please cite:
 
 ```bibtex
 @article{Naeem2026MABRGP,
-  author  = {Naeem, Khan and Wang, Jianjun},
+  author  = {Khan, Naeem and Wang, Jianjun},
   title   = {Covariance-aware asymmetric Bayes risk for reliability-based
              process selection: an additive manufacturing study},
   journal = {Reliability Engineering \& System Safety},
