@@ -7,7 +7,7 @@
 Reference implementation for the paper:
 
 > **Covariance-aware asymmetric Bayes risk for reliability-based process selection: an additive manufacturing study**
-> Khan Naeem and Jianjun Wang.
+> Naeem Khan and Jianjun Wang.
 > *Reliability Engineering & System Safety* (under review), 2026.
 
 ---
